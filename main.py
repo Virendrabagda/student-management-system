@@ -68,7 +68,7 @@ while True:
         try:
             student_id = int(input("Enter student ID:"))
             check_query = "SELECT * FROM STUDENTS WHERE ID=%s"
-            cursor.execute(check_query_query,(student_id,))
+            cursor.execute(check_query,(student_id,))
             student = cursor.fetchone()
             
             if student:
@@ -76,7 +76,7 @@ while True:
                 cursor.execute(delete_query,(student_id,))
                 DB.commit()
                 print("student deleted successfully!")
-            else
+            else:
                 print("press enter not found!")
             input("press Enter to continue...")    
         except ValueError:
